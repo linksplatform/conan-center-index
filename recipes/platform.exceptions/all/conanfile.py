@@ -17,7 +17,7 @@ class PlatformInterfacesConan(ConanFile):
     no_copy_source = True
 
     def requirements(self):
-        self.requires("platform.delegates/[<999.999.999]")
+        self.requires("platform.delegates/0.1.3")
 
     @property
     def _source_subfolder(self):
