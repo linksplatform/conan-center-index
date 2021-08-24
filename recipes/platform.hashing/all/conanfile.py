@@ -81,6 +81,6 @@ class PlatformInterfacesConan(ConanFile):
             }.get(str(self.settings.arch), "")
         self.user_info.suggested_flags = suggested_flags
 
-        if "-march" not in "{} {}".format(tools.get_env("CPPFLAGS", ""), tools.get_env("CPPFLAGS", "")):
-            self.output.warn("Platform.hashing needs to have `-march=ARCH` added to CPPFLAGS/CXXFLAGS.\n"
+        if "-march" not in "{} {}".format(tools.get_env("CPPFLAGS", ""), tools.get_env("CXXFLAGS", "")):
+            self.output.warn("platform.hashing needs to have `-march=ARCH` added to CPPFLAGS/CXXFLAGS."
                              "A suggestion is available in deps_user_info[{name}].suggested_flags.".format(name=self.name))
