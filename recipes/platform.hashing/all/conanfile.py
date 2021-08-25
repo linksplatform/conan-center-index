@@ -1,19 +1,22 @@
-import os
-
 from conans import ConanFile, CMake, tools
 from conans.errors import ConanInvalidConfiguration
+import os
 
 required_conan_version = ">=1.33.0"
 
 
 class PlatformInterfacesConan(ConanFile):
     name = "platform.hashing"
-    license = "MIT"
+    license = "LGPL-3.0-only"
     homepage = "https://github.com/linksplatform/Hashing"
     url = "https://github.com/conan-io/conan-center-index"
-    description = """lol"""
-    topics = ("linksplatform", "cpp20", "Hashing", "header-only")
-    settings = "os", "compiler", "build_type", "arch"
+    description = "platform.hashing is one of the libraries of the LinksPlatform modular framework, " \
+                  "which contains std::hash specializations for:\n" \
+                  " - trivial and standard-layout types\n" \
+                  " - types constrained by std::ranges::range\n" \
+                  " - std::any"
+    topics = ("linksplatform", "cpp20", "hashing", "any", "ranges", "native")
+    settings = "compiler", "arch"
     no_copy_source = True
 
     @property
@@ -44,36 +47,40 @@ class PlatformInterfacesConan(ConanFile):
             self.output.warn("{} recipe lacks information about the {} compiler support.".format(
                 self.name, self.settings.compiler))
 
-        if tools.Version(self.settings.compiler.version) < minimum_version:
-            raise ConanInvalidConfiguration("platform.Hashing/{} "
-                                            "requires C++{} with {}, "
-                                            "which is not supported "
-                                            "by {} {}.".format(
-                self.version, self._minimum_cpp_standard, self.settings.compiler, self.settings.compiler,
+        elif tools.Version(self.settings.compiler.version) < minimum_version:
+            raise ConanInvalidConfiguration("{}/{} requires c++{}, "
+                                            "which is not supported by {} {}.".format(
+                self.name, self.version, self._minimum_cpp_standard, self.settings.compiler,
                 self.settings.compiler.version))
 
         if self.settings.compiler.get_safe("cppstd"):
             tools.check_min_cppstd(self, self._minimum_cpp_standard)
 
-    def source(self):
-        tools.get(**self.conan_data["sources"][self.version], strip_root=True, destination=self._source_subfolder)
+        if self.settings.arch in ("x86", ):
+            raise ConanInvalidConfiguration("{} does not support arch={}".format(self.name, self.settings.arch))
 
-    def configure_cmake(self):
-        cmake = CMake(self)
-        cmake.definitions["SOME_DEFINITION_NAME"] = "On"
-        #cmake.configure()
-        return cmake
+    def package_id(self):
+        self.info.header_only()
+
+    def source(self):
+        tools.get(**self.conan_data["sources"][self.version],
+                  destination=self._source_subfolder, strip_root=True)
 
     def package(self):
         self.copy("*.h", dst="include", src=self._internal_cpp_subfolder)
         self.copy("LICENSE", dst="licenses", src=self._source_subfolder)
 
-        cmake = self.configure_cmake()
-
-    def package_id(self):
-        self.info.header_only()
-
     def package_info(self):
-        self.cpp_info.cxxflags = ["-mpclmul", "-msse4.2"]
-        self.cpp_info.names["cmake_find_package"] = "Platform.Hashing"
-        self.cpp_info.names["cmake_find_package_multi"] = "Platform.Hashing"
+        self.cpp_info.libdirs = []
+        suggested_flags = ""
+        if self.settings.compiler != "Visual Studio":
+            suggested_flags = {
+                "x86_64": "-march=haswell",
+                "armv7": "-march=armv7",
+                "armv8": "-march=armv8-a",
+            }.get(str(self.settings.arch), "")
+        self.user_info.suggested_flags = suggested_flags
+
+        if "-march" not in "{} {}".format(tools.get_env("CPPFLAGS", ""), tools.get_env("CXXFLAGS", "")):
+            self.output.warn("platform.hashing needs to have `-march=ARCH` added to CPPFLAGS/CXXFLAGS. "
+                             "A suggestion is available in deps_user_info[{name}].suggested_flags.".format(name=self.name))
