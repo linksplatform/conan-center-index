@@ -22,7 +22,7 @@ class PlatformInterfacesConan(ConanFile):
 
     @property
     def _internal_cpp_subfolder(self):
-        return os.path.join(self._source_subfolder, "cpp", "Platform.random")
+        return os.path.join(self._source_subfolder, "cpp", "Platform.Random")
 
     @property
     def _compilers_minimum_version(self):
