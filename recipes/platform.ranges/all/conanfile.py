@@ -16,11 +16,6 @@ class PlatformInterfacesConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     no_copy_source = True
 
-    def requirements(self):
-        self.requires("platform.converters/0.1.0")
-        self.requires("platform.hashing/0.1.0")
-        self.requires("platform.exceptions/0.1.0")
-
     @property
     def _source_subfolder(self):
         return "source_subfolder"
@@ -41,6 +36,11 @@ class PlatformInterfacesConan(ConanFile):
     @property
     def _minimum_cpp_standard(self):
         return 20
+
+    def requirements(self):
+        self.requires("platform.converters/0.1.0")
+        self.requires("platform.hashing/0.1.0")
+        self.requires("platform.exceptions/0.1.0")
 
     def validate(self):
         minimum_version = self._compilers_minimum_version.get(str(self.settings.compiler))

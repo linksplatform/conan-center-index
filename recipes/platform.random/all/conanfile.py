@@ -7,12 +7,12 @@ required_conan_version = ">=1.33.0"
 
 
 class PlatformInterfacesConan(ConanFile):
-    name = "platform.converters"
+    name = "platform.random"
     license = "MIT"
-    homepage = "https://github.com/linksplatform/Converters"
+    homepage = "https://github.com/linksplatform/Random"
     url = "https://github.com/conan-io/conan-center-index"
     description = """lol"""
-    topics = ("linksplatform", "cpp20", "converters", "header-only")
+    topics = ("linksplatform", "cpp20", "random", "header-only")
     settings = "os", "compiler", "build_type", "arch"
     no_copy_source = True
 
@@ -22,7 +22,7 @@ class PlatformInterfacesConan(ConanFile):
 
     @property
     def _internal_cpp_subfolder(self):
-        return os.path.join(self._source_subfolder, "cpp", "Platform.Converters")
+        return os.path.join(self._source_subfolder, "cpp", "Platform.random")
 
     @property
     def _compilers_minimum_version(self):
@@ -37,6 +37,9 @@ class PlatformInterfacesConan(ConanFile):
     def _minimum_cpp_standard(self):
         return 20
 
+    def requirements(self):
+        self.requires("platform.ranges/0.1.2")
+
     def validate(self):
         minimum_version = self._compilers_minimum_version.get(str(self.settings.compiler))
 
@@ -45,7 +48,7 @@ class PlatformInterfacesConan(ConanFile):
                 self.name, self.settings.compiler))
 
         if tools.Version(self.settings.compiler.version) < minimum_version:
-            raise ConanInvalidConfiguration("platform.Converters/{} "
+            raise ConanInvalidConfiguration("platform.random/{} "
                                             "requires C++{} with {}, "
                                             "which is not supported "
                                             "by {} {}.".format(
@@ -65,6 +68,3 @@ class PlatformInterfacesConan(ConanFile):
     def package_id(self):
         self.info.header_only()
 
-    def package_info(self):
-        self.cpp_info.names["cmake_find_package"] = "Platform.Converters"
-        self.cpp_info.names["cmake_find_package_multi"] = "Platform.Converters"

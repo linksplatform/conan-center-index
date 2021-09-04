@@ -1,4 +1,4 @@
 sources:
-  "0.1.1":
-    url: https://github.com/linksplatform/Exceptions/archive/refs/tags/0.4.0_0.1.1.zip
-    sha256: 4f7b194d82789360b716a7cdad13c2d0448d63b19bfca232cd399ae41da600af
+  "0.2.0":
+    url: https://github.com/linksplatform/Exceptions/archive/refs/tags/0.4.0_0.2.0.zip
+    sha256: 9e4513da667e41f0bbe776123747ac63958972edb00eaee300c495ae3b39eb9b
