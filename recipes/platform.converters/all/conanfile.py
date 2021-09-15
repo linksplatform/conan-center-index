@@ -11,9 +11,9 @@ class PlatformInterfacesConan(ConanFile):
     license = "MIT"
     homepage = "https://github.com/linksplatform/Converters"
     url = "https://github.com/conan-io/conan-center-index"
-    description = """lol"""
+    description = "platform.converters is one of the libraries of the LinksPlatform modular framework, "
     topics = ("linksplatform", "cpp20", "converters", "header-only")
-    settings = "os", "compiler", "build_type", "arch"
+    settings = "compiler"
     no_copy_source = True
 
     @property
@@ -44,11 +44,9 @@ class PlatformInterfacesConan(ConanFile):
             self.output.warn("{} recipe lacks information about the {} compiler support.".format(
                 self.name, self.settings.compiler))
 
-        if tools.Version(self.settings.compiler.version) < minimum_version:
-            raise ConanInvalidConfiguration("platform.Converters/{} "
-                                            "requires C++{} with {}, "
-                                            "which is not supported "
-                                            "by {} {}.".format(
+        elif tools.Version(self.settings.compiler.version) < minimum_version:
+            raise ConanInvalidConfiguration("{}/{} requires c++{} "
+                                            "which, is not supported by {} {}.".format(
                 self.version, self._minimum_cpp_standard, self.settings.compiler, self.settings.compiler,
                 self.settings.compiler.version))
 
@@ -56,7 +54,8 @@ class PlatformInterfacesConan(ConanFile):
             tools.check_min_cppstd(self, self._minimum_cpp_standard)
 
     def source(self):
-        tools.get(**self.conan_data["sources"][self.version], strip_root=True, destination=self._source_subfolder)
+        tools.get(**self.conan_data["sources"][self.version],
+                  destination=self._source_subfolder, strip_root=True)
 
     def package(self):
         self.copy("*.h", dst="include", src=self._internal_cpp_subfolder)
@@ -64,7 +63,3 @@ class PlatformInterfacesConan(ConanFile):
 
     def package_id(self):
         self.info.header_only()
-
-    def package_info(self):
-        self.cpp_info.names["cmake_find_package"] = "Platform.Converters"
-        self.cpp_info.names["cmake_find_package_multi"] = "Platform.Converters"
