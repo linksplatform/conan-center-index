@@ -11,7 +11,7 @@ class PlatformInterfacesConan(ConanFile):
     license = "MIT"
     homepage = "https://github.com/linksplatform/Converters"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "platform.converters is one of the libraries of the LinksPlatform modular framework, "
+    description = "platform.converters is one of the libraries of the LinksPlatform modular framework"
     topics = ("linksplatform", "cpp20", "converters", "header-only")
     settings = "compiler"
     no_copy_source = True
