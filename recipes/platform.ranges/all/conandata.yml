@@ -2,3 +2,6 @@ sources:
   "0.1.2":
     url: https://github.com/linksplatform/Ranges/archive/refs/tags/0.3.0_0.1.2.zip
     sha256: 948f09f168592e8bbe6e5ad741904f10fa9b7978d5db2563db740acab7db0984
+  "0.1.3":
+    url: https://github.com/linksplatform/Ranges/archive/refs/tags/0.3.0_0.1.3.zip
+    sha256: 3792818f8eaf8b6bb2a17f6b294f18bc021eeaa3d64005e5089814c3a5fbd018
