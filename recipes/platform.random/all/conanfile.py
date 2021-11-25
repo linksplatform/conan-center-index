@@ -40,7 +40,7 @@ class PlatformSettersConan(ConanFile):
         }
 
     def requirements(self):
-        self.requires("platform.ranges/0.1.4")
+        self.requires("platform.ranges/0.1.3")
 
     def validate(self):
         minimum_version = self._compilers_minimum_version.get(str(self.settings.compiler), False)
