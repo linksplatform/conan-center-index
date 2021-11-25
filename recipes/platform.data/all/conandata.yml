@@ -1,5 +1,5 @@
 sources:
   "0.1.0":
-    url: https://github.com/uselessgoddess/Box/files/7260115/Data.zip
-    sha256: 64ef743eb334d378f953c1b035151b122c97d73b78a95e847c81ab2a31b30284
+    url: https://github.com/uselessgoddess/Box/releases/download/Platform.Data_0.1.0/Data-0.1.0.zip
+    sha256: 71d989008a20697cc59e6d1bd868ecb859c57fb864ae0c20597546f885eba31a
 
