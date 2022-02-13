@@ -1,0 +1,19 @@
+sources:
+  "0.2.0":
+    url: https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.0.zip
+    sha256: 7afe43b3ddd64a4875b94a95af3509d312b78da00255e94a2258f112febf09ab
+  "0.2.1":
+    url: https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.1.zip
+    sha256: 010bdfb1143e072c97d6cff24cce1cb5777b55dfc9f6506aa72fc78319a37366
+  "0.2.2":
+    url: https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.2.zip
+    sha256: de17b2797ebdccbbd2d3279ba0386af65a99c146a2bcd2b961093c805de8e901
+  "0.2.3":
+    url: https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.3.zip
+    sha256: e056690a50cbcd33d41d40e031d4f1b4e7fc7ae5877b0922634f9cdb2bd50875
+  "0.2.4":
+    url: https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.4.zip
+    sha256: a0506ebc48b743aaebad56d9510afa87e7dac0d3bc331fb39ea7b71d51a6bde0
+  "0.2.5":
+    url: https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.5.zip
+    sha256: 1fc08e2ecb482e94c8b59c1a5bc8d0e4adb5ce205c6446c5ecb665c0f0fb70fc 

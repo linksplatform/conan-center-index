@@ -2,18 +2,15 @@ import os
 
 from conans import ConanFile, CMake, tools
 from conans.errors import ConanInvalidConfiguration
+import os
 
 required_conan_version = ">=1.33.0"
 
 
 class PlatformInterfacesConan(ConanFile):
     name = "platform.equality"
-    license = "MIT"
     homepage = "https://github.com/linksplatform/Equality"
     url = "https://github.com/conan-io/conan-center-index"
-    description = """lol"""
-    topics = ("linksplatform", "cpp20", "Equality", "header-only")
-    settings = "os", "compiler", "build_type", "arch"
     no_copy_source = True
 
     @property
@@ -44,8 +41,6 @@ class PlatformInterfacesConan(ConanFile):
             self.output.warn("{} recipe lacks information about the {} compiler support.".format(
                 self.name, self.settings.compiler))
 
-        if tools.Version(self.settings.compiler.version) < minimum_version:
-            raise ConanInvalidConfiguration("platform.Equality/{} "
                                             "requires C++{} with {}, "
                                             "which is not supported "
                                             "by {} {}.".format(
