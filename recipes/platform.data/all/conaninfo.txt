@@ -1,0 +1,28 @@
+[settings]
+
+
+[requires]
+
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    compiler=gcc
+    compiler.libcxx=libstdc++11
+    compiler.version=10
+
+[full_requires]
+    platform.collections/0.1.0:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+    platform.setters/0.0.1:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+    platform.threading/0.1.0:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+
+[full_options]
+
+
+[recipe_hash]
+
+
+[env]
+
