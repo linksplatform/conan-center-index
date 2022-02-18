@@ -38,7 +38,7 @@ class PlatformInterfacesConan(ConanFile):
         return 20
 
     def requirements(self):
-        self.requires("platform.interfaces/0.2.0")
+        self.requires(platform.interfaces/0.2.5)
         self.requires("platform.exceptions/0.2.0")
         self.requires("platform.equality/0.0.1")
         self.requires("platform.hashing/0.2.0")
