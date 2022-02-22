@@ -43,6 +43,7 @@ class PlatformInterfacesConan(ConanFile):
         self.requires("platform.equality/0.0.1")
         self.requires("platform.hashing/0.2.0")
         self.requires("platform.random/0.1.0")
+        self.requires("ms-gsl/4.0.0")
 
     def validate(self):
         minimum_version = self._compilers_minimum_version.get(str(self.settings.compiler))
@@ -64,10 +65,10 @@ class PlatformInterfacesConan(ConanFile):
 
     def source(self):
         tools.get(**self.conan_data["sources"][self.version],
-                  destination=self._source_subfolder, strip_root=True)
+        destination=self._source_subfolder, strip_root=True)
 
     def package(self):
-        self.output.error(self._internal_cpp_subfolder)
+        # self.output.error(self._internal_cpp_subfolder)
         self.copy("*.h", dst="include", src=self._internal_cpp_subfolder)
         self.copy("LICENSE", dst="licenses", src=self._source_subfolder)
 
