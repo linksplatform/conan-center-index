@@ -39,6 +39,7 @@ class PlatformInterfacesConan(ConanFile):
 
     def requirements(self):
         self.requires("platform.collections/0.1.0")
+        self.requires("ms-gsl/4.0.0")
 
     def validate(self):
         minimum_version = self._compilers_minimum_version.get(str(self.settings.compiler))
