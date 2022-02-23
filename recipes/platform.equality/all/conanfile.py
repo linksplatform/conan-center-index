@@ -1,5 +1,3 @@
-import os
-
 from conans import ConanFile, CMake, tools
 from conans.errors import ConanInvalidConfiguration
 import os
@@ -9,8 +7,13 @@ required_conan_version = ">=1.33.0"
 
 class PlatformInterfacesConan(ConanFile):
     name = "platform.equality"
+    license = "LGPL-3.0-or-later"
     homepage = "https://github.com/linksplatform/Equality"
     url = "https://github.com/conan-io/conan-center-index"
+    description = "platform.delegates is one of the libraries of the LinksPlatform modular framework, " \
+                  "which uses innovations from the C++20 standard, for slow parody any typing dictionary and others."
+    topics = ("linksplatform", "cpp20", "equality", "ranges", "any", "header-only")
+    settings = "compiler"
     no_copy_source = True
 
     @property
@@ -41,6 +44,8 @@ class PlatformInterfacesConan(ConanFile):
             self.output.warn("{} recipe lacks information about the {} compiler support.".format(
                 self.name, self.settings.compiler))
 
+        elif tools.Version(self.settings.compiler.version) < minimum_version:
+            raise ConanInvalidConfiguration("platform.equality/{} "
                                             "requires C++{} with {}, "
                                             "which is not supported "
                                             "by {} {}.".format(
@@ -53,22 +58,9 @@ class PlatformInterfacesConan(ConanFile):
     def source(self):
         tools.get(**self.conan_data["sources"][self.version], strip_root=True, destination=self._source_subfolder)
 
-    def configure_cmake(self):
-        cmake = CMake(self)
-        cmake.definitions["SOME_DEFINITION_NAME"] = "On"
-        #cmake.configure()
-        return cmake
-
     def package(self):
         self.copy("*.h", dst="include", src=self._internal_cpp_subfolder)
         self.copy("LICENSE", dst="licenses", src=self._source_subfolder)
 
-        cmake = self.configure_cmake()
-
     def package_id(self):
         self.info.header_only()
-
-    def package_info(self):
-        self.cpp_info.cxxflags = ["-mpclmul", "-msse4.2"]
-        self.cpp_info.names["cmake_find_package"] = "Platform.Equality"
-        self.cpp_info.names["cmake_find_package_multi"] = "Platform.Equality"
