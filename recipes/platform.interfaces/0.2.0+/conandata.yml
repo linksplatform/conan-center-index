@@ -15,5 +15,5 @@ sources:
     url: https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.4.zip
     sha256: a0506ebc48b743aaebad56d9510afa87e7dac0d3bc331fb39ea7b71d51a6bde0
   "0.2.5":
-    url: https://github.com/linksplatform/Interfaces/archive/refs/tags/0.4.0_0.2.5.zip
-    sha256: 1fc08e2ecb482e94c8b59c1a5bc8d0e4adb5ce205c6446c5ecb665c0f0fb70fc 
+    url: https://github.com/uselessgoddess/Box/releases/download/Platform.Interfaces_0.2.5.zip/Interfaces-0.2.5.zip
+    sha256: 125fdd49883b5d3dd4fa0905443b2d6717b33ee729c2e26f1d3ceb845a46ee05 
