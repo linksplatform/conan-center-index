@@ -2,3 +2,7 @@ sources:
   "0.2.0":
     url: https://github.com/linksplatform/Exceptions/archive/refs/tags/0.4.0_0.2.0.zip
     sha256: 9e4513da667e41f0bbe776123747ac63958972edb00eaee300c495ae3b39eb9b
+
+  "0.2.1":
+    url: https://github.com/linksplatform/Exceptions/archive/refs/tags/0.4.0_0.2.1.zip
+    sha256: 5c5f7b8664c9f5e44aecfb250f8c9e8b4f5094984cfcac2aea112ecefb1568fe
