@@ -2,7 +2,7 @@ name: docs_markdown_toc
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'docs/**'
 
