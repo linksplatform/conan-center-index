@@ -2,15 +2,18 @@ import os
 
 from conans import ConanFile, CMake, tools
 from conans.errors import ConanInvalidConfiguration
-import os
 
 required_conan_version = ">=1.33.0"
 
 
 class PlatformInterfacesConan(ConanFile):
-    name = "platform.equality"
-    homepage = "https://github.com/linksplatform/Equality"
+    name = "platform.converters"
+    license = "MIT"
+    homepage = "https://github.com/linksplatform/Converters"
     url = "https://github.com/conan-io/conan-center-index"
+    description = """lol"""
+    topics = ("linksplatform", "cpp20", "converters", "header-only")
+    settings = "os", "compiler", "build_type", "arch"
     no_copy_source = True
 
     @property
@@ -19,7 +22,7 @@ class PlatformInterfacesConan(ConanFile):
 
     @property
     def _internal_cpp_subfolder(self):
-        return os.path.join(self._source_subfolder, "cpp", "Platform.Equality")
+        return os.path.join(self._source_subfolder, "cpp", "Platform.Converters")
 
     @property
     def _compilers_minimum_version(self):
@@ -41,6 +44,8 @@ class PlatformInterfacesConan(ConanFile):
             self.output.warn("{} recipe lacks information about the {} compiler support.".format(
                 self.name, self.settings.compiler))
 
+        if tools.Version(self.settings.compiler.version) < minimum_version:
+            raise ConanInvalidConfiguration("platform.Converters/{} "
                                             "requires C++{} with {}, "
                                             "which is not supported "
                                             "by {} {}.".format(
@@ -53,22 +58,13 @@ class PlatformInterfacesConan(ConanFile):
     def source(self):
         tools.get(**self.conan_data["sources"][self.version], strip_root=True, destination=self._source_subfolder)
 
-    def configure_cmake(self):
-        cmake = CMake(self)
-        cmake.definitions["SOME_DEFINITION_NAME"] = "On"
-        #cmake.configure()
-        return cmake
-
     def package(self):
         self.copy("*.h", dst="include", src=self._internal_cpp_subfolder)
         self.copy("LICENSE", dst="licenses", src=self._source_subfolder)
-
-        cmake = self.configure_cmake()
 
     def package_id(self):
         self.info.header_only()
 
     def package_info(self):
-        self.cpp_info.cxxflags = ["-mpclmul", "-msse4.2"]
-        self.cpp_info.names["cmake_find_package"] = "Platform.Equality"
-        self.cpp_info.names["cmake_find_package_multi"] = "Platform.Equality"
+        self.cpp_info.names["cmake_find_package"] = "Platform.Converters"
+        self.cpp_info.names["cmake_find_package_multi"] = "Platform.Converters"
