@@ -36,12 +36,12 @@ class LibnameConan(ConanFile):
                 raise ConanInvalidConfiguration("graphene does not support GCC before 5.0")
     
     def build_requirements(self):
-        self.build_requires("meson/0.60.2")
+        self.build_requires("meson/0.61.2")
         self.build_requires("pkgconf/1.7.4")
     
     def requirements(self):
         if self.options.with_glib:
-            self.requires("glib/2.70.1")
+            self.requires("glib/2.72.0")
 
     def configure(self):
         if self.options.shared:
@@ -92,6 +92,8 @@ class LibnameConan(ConanFile):
         self.cpp_info.components["graphene-1.0"].libs = ["graphene-1.0"]
         self.cpp_info.components["graphene-1.0"].includedirs = [os.path.join("include", "graphene-1.0"), os.path.join("lib", "graphene-1.0", "include")]
         self.cpp_info.components["graphene-1.0"].names["pkg_config"] = "graphene-1.0"
+        if self.settings.os in ["Linux", "FreeBSD"]:
+            self.cpp_info.components["graphene-1.0"].system_libs = ["m", "pthread"]
         if self.options.with_glib:
             self.cpp_info.components["graphene-1.0"].requires = ["glib::gobject-2.0"]
 
