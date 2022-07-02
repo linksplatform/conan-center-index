@@ -1,5 +1,28 @@
 # Changelog
 
+### 27-June-2022 - 17:29 CEST
+
+- [fix] Fix "no changes detected" issue in some pull-requests.
+- [fix] Avoid static builds with static runtime in MSVC compiler.
+- [fix] Fix Conan v2 export checkout of sources.
+- [fix] Conan v2: Avoid reading configuration entries that do not exist.
+- [feature] Avoid failure in some jobs when the system is under maintenance.
+- [feature] ValidateInfrastructure job now works for `msvc` & Visual Studio 2022.
+- [feature] Conan v2: support hooks installation.
+- [feature] Add more parameters to DSL scripts.
+
+### 08-June-2022 - 16:29 CEST
+
+- [feature] Allow changes in multiple folders (except for the `recipes` one).
+- [feature] Detect changes made in a future `linters` folder.
+- [feature] Validate configuration files in pull-requests that modifies them.
+- [feature] Add support for more Conan v2 commands.
+- [feature] DSL: Parameterize jenkinsfile path.
+- [fix] DSL: Discard old builds to avoid consuming all inodes.
+- [fix] Remove `under maintenance` label in pull requests.
+- [fix] Add a detailed message for Conan v2 export.
+- [fix] Abort `RelaunchUnexpectedError` job when the system is under maintenance.
+
 ### 19-May-2022 - 15:52 CEST
 
 - [feature] Add Conan v2 export extra step in pull-request job.
