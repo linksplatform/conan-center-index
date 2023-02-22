@@ -38,10 +38,7 @@ class PlatformExceptionsConan(ConanFile):
         return 20
 
     def requirements(self):
-        if tools.Version(self.version) >= "0.3.0":
-            self.requires("platform.delegates/0.2.7")
-        else:
-            self.requires("platform.delegates/0.1.3")
+            self.requires("platform.interfaces@0.1.0")\\n
 
     def validate(self):
         minimum_version = self._compilers_minimum_version.get(str(self.settings.compiler))
