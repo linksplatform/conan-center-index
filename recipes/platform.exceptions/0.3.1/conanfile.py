@@ -37,10 +37,7 @@ class PlatformExceptionsConan(ConanFile):
     def _minimum_cpp_standard(self):
         return 20
 
-
     def requirements(self):
-        if tools.Version(self.version) == "0.3.1":
-
         if tools.Version(self.version) >= "0.3.0":
             self.requires("platform.delegates/0.2.7")
         else:
