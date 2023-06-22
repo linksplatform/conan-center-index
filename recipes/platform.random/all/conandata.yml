@@ -1,0 +1,5 @@
+sources:
+  "0.2.0":
+    source:
+      url: "https://github.com/linksplatform/Random/releases/download/cpp_0.2.0/platform.random_0.2.0.zip"
+      sha256: "BDAD51D2ACC030C97C8588DB29E6E2354A9BC5EFE23491B0E39B148265BD31F7"
