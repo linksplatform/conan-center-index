@@ -1,5 +1,5 @@
 sources:
-  "0.5.0":
+  "0.5.4":
     source:
-      url: "https://github.com/linksplatform/Hashing/releases/download/cpp_0.5.0/platform.hashing_0.5.0.zip"
-      sha256: "37B4E8B294DDCE665D1858E0663497F51C329737B2017A4EBE75ECDA9F4AE525"
+      url: "https://github.com/linksplatform/Hashing/releases/download/cpp_0.5.4/platform.hashing_0.5.4.zip"
+      sha256: "a89fcd1fdfb4653e83b1d15547cdbe10d99f038fbeb407f08c22e7f2a785c63a"
