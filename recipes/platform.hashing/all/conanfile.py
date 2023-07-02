@@ -58,6 +58,9 @@ class PlatformInterfacesConan(ConanFile):
     def package_id(self):
         self.info.clear()
 
+    def build_requirements(self):
+        self.requires("cpu_features/0.8.0")
+
     def source(self):
         get(self, **self.conan_data["sources"][self.version]["source"], strip_root=True)
 
