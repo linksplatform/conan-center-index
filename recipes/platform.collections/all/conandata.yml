@@ -1,0 +1,5 @@
+sources:
+  "0.2.1":
+    source:
+      sha256: "0da58fc45ab70295e6fffc041379a6d46a091609294f2fa5892b8acc2975b815"
+      url: "https://github.com/linksplatform/Collections/releases/download/cpp_0.2.1/platform.collections_0.2.1.zip"
