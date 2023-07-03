@@ -1,0 +1,5 @@
+sources:
+  "0.1.0":
+    source:
+      sha256: "111514609e5ea614dae1370efdb9f1f77b5f5781d87b056159f27e8a24357c7d"
+      url: "https://github.com/linksplatform/Timestamps/releases/download/cpp_0.1.0/platform.timestamps_0.1.0.zip"

@@ -1,0 +1,5 @@
+sources:
+  "0.1.0":
+    source:
+      sha256: "932b4e9fb76c69c32775d58b7ae3dc819901261a95f3be2e9fa0c0b0295da105"
+      url: "https://github.com/linksplatform/Setters/releases/download/cpp_0.1.0/platform.setters_0.1.0.zip"
