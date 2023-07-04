@@ -1,0 +1,5 @@
+sources:
+  "0.1.0":
+    source:
+      sha256: "8cc7b6228cb6eeb27666b78c370c2daa3605892878f50849ff03add2cafe6a9d"
+      url: "https://github.com/linksplatform/Memory/releases/download/cpp_0.1.0/platform.memory_0.1.0.zip"
