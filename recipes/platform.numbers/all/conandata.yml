@@ -1,0 +1,5 @@
+sources:
+  "0.1.0":
+    source:
+      sha256: "442fc978490a9221085182b2e7a6e5cddec2ea04d5baf58dab5534a74640c603"
+      url: "https://github.com/linksplatform/Numbers/releases/download/cpp_0.1.0/platform.numbers_0.1.0.zip"
