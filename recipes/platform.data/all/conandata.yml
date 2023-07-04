@@ -1,0 +1,5 @@
+sources:
+  "0.1.0":
+    source:
+      sha256: "d8b0eb7305a0b6474d94e5472d798b2b82263623a686d755c409509a347277ec"
+      url: "https://github.com/linksplatform/Data/releases/download/cpp_0.1.0/platform.data_0.1.0.zip"
