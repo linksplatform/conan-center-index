@@ -1,0 +1,5 @@
+sources:
+  "0.3.0":
+    source:
+      sha256: "79086e5d951f72f42acccd380554592f2bcae2b778fbb4b5637d055de0388422"
+      url: "https://github.com/linksplatform/Collections.Methods/releases/download/cpp_0.3.0/platform.collections.methods_0.3.0.zip"
