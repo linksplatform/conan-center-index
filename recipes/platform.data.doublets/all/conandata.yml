@@ -1,0 +1,5 @@
+sources:
+  "0.1.0":
+    source:
+      sha256: "41045316d1bfd87beb08bc021841e3119678725f7c54281cdd47c882881b44ec"
+      url: "https://github.com/linksplatform/Data.Doublets/releases/download/cpp_0.1.0/platform.data.doublets_0.1.0.zip"
