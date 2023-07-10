@@ -62,7 +62,7 @@ class PlatformDataDoubletsConan(ConanFile):
         self.requires('platform.collections.methods/0.3.0')
         self.requires('platform.collections/0.2.1')
         self.requires('platform.memory/0.1.0')
-        self.requires('platform.data/0.1.0')
+        self.requires('platform.data/0.1.1')
         self.requires('platform.random/0.2.0')
         self.requires('platform.interfaces/0.3.41')
         self.requires('platform.ranges/0.2.0')
