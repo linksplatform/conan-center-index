@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cassert>
+#include <cstdint>
 #include <limits>
 #include <Platform.Numbers.h>
 
