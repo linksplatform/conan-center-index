@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cassert>
+#include <cstdint>
 #include <Platform.Setters.h>
 
 using namespace Platform::Setters;
