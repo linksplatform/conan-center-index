@@ -10,7 +10,7 @@ required_conan_version = ">=2.0.0"
 
 class PlatformInterfacesConan(ConanFile):
     name = "platform.hashing"
-    license = "LGPL-3.0-only"
+    license = "Unlicense"
     homepage = "https://github.com/linksplatform/Hashing"
     url = "https://github.com/conan-io/conan-center-index"
     description = "platform.hashing is one of the libraries of the LinksPlatform modular framework, " \
@@ -59,7 +59,7 @@ class PlatformInterfacesConan(ConanFile):
         self.info.clear()
 
     def build_requirements(self):
-        self.requires("cpu_features/0.8.0")
+        self.requires("cpuinfo/cci.20220228")
 
     def source(self):
         get(self, **self.conan_data["sources"][self.version]["source"], strip_root=True)
@@ -82,7 +82,7 @@ class PlatformInterfacesConan(ConanFile):
             suggested_flags = {
                 "x86_64": "-march=haswell",
                 "armv7": "-march=armv7",
-                "armv8": "-march=armv8-a",
+                "armv8": "-march=armv8-a+crypto+crc",
             }.get(str(self.settings.arch), "")
         
         self.cpp_info.set_property("suggested_flags", suggested_flags)

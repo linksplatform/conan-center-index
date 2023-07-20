@@ -61,7 +61,7 @@ class PlatformCollectionsConan(ConanFile):
         self.requires('platform.interfaces/0.3.41')
         self.requires('platform.exceptions/0.3.2')
         self.requires('platform.equality/0.0.1')
-        self.requires('platform.hashing/0.5.4')
+        self.requires('platform.hashing/0.5.6')
         self.requires('platform.random/0.2.0')
         self.requires('ms-gsl/4.0.0')
 

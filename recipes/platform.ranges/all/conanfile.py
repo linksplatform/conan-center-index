@@ -63,7 +63,7 @@ class PlatformExceptionsConan(ConanFile):
             self.requires("platform.exceptions/0.3.2")
             self.requires("platform.converters/0.2.0")
             self.requires("platform.delegates/0.3.7")
-            self.requires("platform.hashing/0.5.4")
+            self.requires("platform.hashing/0.5.6")
 
     def source(self):
         get(self, **self.conan_data["sources"][self.version]["source"], strip_root=True)
