@@ -11,9 +11,9 @@ required_conan_version = ">=2.0"
 class PlatformCollectionsConan(ConanFile):
     name = "platform.collections"
     license = "Unlicense"
-    homepage = "fill it"
+    homepage = "https://github.com/linksplatform/Collections"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "fill it"
+    description = """Platform.Collections.h is a comprehensive C++ library that provides a variety of utilities, interfaces, and extensions for working with data structures and algorithms. These include arrays, lists, segments, sets, stacks, bitstrings, strings, dictionaries, and trees."""
     topics = ("linksplatform", "cpp20", "collections")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True
