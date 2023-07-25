@@ -10,7 +10,7 @@ required_conan_version = ">=2.0.0"
 
 class PlatformDelegatesConan(ConanFile):
     name = "platform.delegates"
-    license = "MIT"
+    license = "Unlicense"
     homepage = "https://github.com/linksplatform/Delegates"
     url = "https://github.com/conan-io/conan-center-index"
     description = """platform.delegates is one of the libraries of the LinksPlatform modular framework, which uses 

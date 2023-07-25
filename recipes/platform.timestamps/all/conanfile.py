@@ -11,9 +11,9 @@ required_conan_version = ">=2.0"
 class PlatformTimestampsConan(ConanFile):
     name = "platform.timestamps"
     license = "Unlicense"
-    homepage = "fill it"
+    homepage = "https://github.com/linksplatform/Timestamps"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "fill it"
+    description = """The Platform.Timestamps library, as exemplified in this C++ code, offers a versatile Timestamp structure designed to manage and manipulate time data with high precision. The library provides conversion to and from other time formats, string and stream representations, and comparison and hashing capabilities, thereby making it a comprehensive solution for handling timestamp data in C++ applications."""
     topics = ("linksplatform", "cpp20", "exceptions", "any", "ranges", "native")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True

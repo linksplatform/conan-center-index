@@ -11,9 +11,9 @@ required_conan_version = ">=2.0"
 class PlatformCollectionsMethodsConan(ConanFile):
     name = "platform.collections.methods"
     license = "Unlicense"
-    homepage = "fill it"
+    homepage = "https://github.com/linksplatform/Collections.Methods"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "fill it"
+    description = """The Collections.Methods.h library in C++ provides robust methods and implementations for manipulating complex data structures, with a particular emphasis on lists and trees. It includes bases and specialized methods for different types of doubly linked lists, and various tree structures including size-balanced, AVL balanced, and recursionless size-balanced trees."""
     topics = ("linksplatform", "cpp20", "exceptions", "any", "ranges", "native")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True

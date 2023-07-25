@@ -11,7 +11,7 @@ required_conan_version = ">=2.0"
 
 class PlatformExceptionsConan(ConanFile):
     name = "platform.exceptions"
-    license = "MIT"
+    license = "Unlicense"
     homepage = "https://github.com/linksplatform/Exceptions"
     url = "https://github.com/conan-io/conan-center-index"
     description = "platform.exceptions is one of the libraries of the LinksPlatform modular framework, " \

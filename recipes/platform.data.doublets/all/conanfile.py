@@ -11,9 +11,9 @@ required_conan_version = ">=2.0"
 class PlatformDataDoubletsConan(ConanFile):
     name = "platform.data.doublets"
     license = "Unlicense"
-    homepage = "fill it"
+    homepage = "https://github.com/linksplatform/Data.Doublets"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "fill it"
+    description = """The Platform.Data.Doublets library is a specific implementation of the ILinks interface from the Platform.Data library in C++. It provides a robust toolset for the manipulation of doublets, a specific type of data structure. The library leverages the flexible design of the ILinks interface to provide a specialized, efficient, and effective mechanism for managing doublets in various data manipulation scenarios."""
     topics = ("linksplatform", "cpp20", "exceptions", "any", "ranges", "native")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True

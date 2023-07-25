@@ -9,7 +9,7 @@ import os
 required_conan_version = ">=2.0"
 
 
-class PlatformExceptionsConan(ConanFile):
+class PlatformRandomConan(ConanFile):
     name = "platform.random"
     license = "unlicense"
     homepage = "https://github.com/linksplatform/Random"

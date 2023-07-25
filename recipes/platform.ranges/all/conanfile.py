@@ -9,13 +9,12 @@ import os
 required_conan_version = ">=2.0"
 
 
-class PlatformExceptionsConan(ConanFile):
+class PlatformRangesConan(ConanFile):
     name = "platform.ranges"
-    license = "unlicense"
+    license = "Unlicense"
     homepage = "https://github.com/linksplatform/Ranges"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "platform.exceptions is one of the libraries of the LinksPlatform modular framework, " \
-                  "to ensure exceptions"
+    description = """The Platform.Ranges library, as shown in this C++ code, is a comprehensive toolkit for handling and manipulating ranges of values. It provides a customizable Range data structure, equipped with methods for range containment checks, string conversion, stream output, and hash computation, making it a powerful tool for handling ranges in various computational scenarios."""
     topics = ("linksplatform", "cpp20", "any", "ranges", "native")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True

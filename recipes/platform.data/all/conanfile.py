@@ -11,9 +11,9 @@ required_conan_version = ">=2.0"
 class PlatformDataConan(ConanFile):
     name = "platform.data"
     license = "Unlicense"
-    homepage = "fill it"
+    homepage = "https://github.com/linksplatform/Data"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "fill it"
+    description = """The Platform.Data library, as showcased by the ILinks interface in C++, provides mechanisms for manipulating data in the 'Links' storage format. It is designed to handle entities of varying sizes, from doublets and triplets to sequences of links of any size."""
     topics = ("linksplatform", "cpp20", "exceptions", "any", "ranges", "native")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True
