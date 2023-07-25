@@ -9,9 +9,9 @@ import os
 required_conan_version = ">=2.0"
 
 
-class PlatformExceptionsConan(ConanFile):
+class PlatformRangesConan(ConanFile):
     name = "platform.ranges"
-    license = "unlicense"
+    license = "Unlicense"
     homepage = "https://github.com/linksplatform/Ranges"
     url = "https://github.com/conan-io/conan-center-index"
     description = "platform.exceptions is one of the libraries of the LinksPlatform modular framework, " \

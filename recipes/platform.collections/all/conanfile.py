@@ -14,7 +14,7 @@ class PlatformCollectionsConan(ConanFile):
     homepage = "fill it"
     url = "https://github.com/conan-io/conan-center-index"
     description = "fill it"
-    topics = ("linksplatform", "cpp20", "exceptions", "any", "ranges", "native")
+    topics = ("linksplatform", "cpp20", "collections")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True
 
