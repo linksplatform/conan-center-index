@@ -11,9 +11,9 @@ required_conan_version = ">=2.0"
 class PlatformMemoryConan(ConanFile):
     name = "platform.memory"
     license = "Unlicense"
-    homepage = "fill it"
+    homepage = "https://github.com/linksplatform/Memory"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "fill it"
+    description = """The Platform.Memory library, as implemented in C++, provides a robust and comprehensive set of tools for memory management, including direct memory, array memory, and resizable direct memory functionalities. By incorporating system-level, standard, and third-party libraries, it offers a versatile platform for handling complex memory-related tasks, making it an essential resource for high-performance, memory-intensive C++ applications."""
     topics = ("linksplatform", "cpp20", "exceptions", "any", "ranges", "native")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True

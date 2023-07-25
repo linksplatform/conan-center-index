@@ -11,9 +11,9 @@ required_conan_version = ">=2.0"
 class PlatformNumbersConan(ConanFile):
     name = "platform.numbers"
     license = "Unlicense"
-    homepage = "fill it"
+    homepage = "https://github.com/linksplatform/Numbers"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "fill it"
+    description = """The Platform.Numbers library, as presented in this C++ code, offers a specialized set of numerical computation and manipulation tools focused on bit-level operations. It provides functions for operations such as counting bits, identifying the position of the lowest bit, and partial reading and writing of numerical data at the bit level, making it a key asset for applications requiring low-level, bit-wise data manipulation."""
     topics = ("linksplatform", "cpp20", "exceptions", "any", "ranges", "native")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True

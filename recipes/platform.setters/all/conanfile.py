@@ -11,9 +11,9 @@ required_conan_version = ">=2.0"
 class PlatformSettersConan(ConanFile):
     name = "platform.setters"
     license = "Unlicense"
-    homepage = "fill it"
+    homepage = "https://github.com/linksplatform/Setters"
     url = "https://github.com/conan-io/conan-center-index"
-    description = "fill it"
+    description = """The Platform.Setters library, as seen in this C++ code, provides a fundamental SetterBase template class that encapsulates the functionality of a setter for a variable of a given type. The library offers simple yet versatile interfaces for setting and retrieving values, making it an essential tool for managing data in C++ applications that follow encapsulation principles."""
     topics = ("linksplatform", "cpp20", "exceptions", "any", "ranges", "native")
     settings = "os", "arch", "compiler", "build_type"
     no_copy_source = True
